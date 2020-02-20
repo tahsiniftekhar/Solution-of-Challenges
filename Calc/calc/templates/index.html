@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator!</title>
+</head>
+<body>
+<center>
+{% block content %}
+
+    <form method="POST" action="calc">
+        {% csrf_token %}
+        <input type="text" name="num1"> <input type="text" name="num2">
+            
+            <select name="sign">
+                <option value="add" >+</option>
+                <option value="dif" >-</option>
+                <option value="mult" >*</option>
+                <option value="div" >/</option>
+            </select>
+        <input type="submit" value="submit">
+    </form>
+
+{% endblock  %}
+</center>
+</body>
+</html>
