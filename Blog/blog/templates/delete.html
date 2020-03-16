@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Blog</title>
+</head>
+<body>
+    <center>
+        <form method='POST' name="delete">
+        {% csrf_token %}
+            <h2>Delete a new Blog</h2>
+            <label>Blog Title :</label>
+            {{delete_blog.title}}<br><br>
+            <label>Blog :</label>
+            {{delete_blog.content}}<br><br>
+            <input type="submit" value="Delete">
+        </form>
+    </center>   
+</body>
+</html>

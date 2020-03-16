@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a new Blog</title>
+</head>
+<body>
+    <center>
+        <form method='POST' name="create">
+        {% csrf_token %}
+            <h2>Write a new Blog</h2>
+            <label>Blog Title :</label>
+            <input type="text" name="bname"><br><br>
+            <label>Blog :</label>
+            <textarea name="body"></textarea><br>
+            <input type="submit" value="Create">
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Blog!</title>
+</head>
+<body>
+    <center>
+        <form method='POST' name="edit">
+        {% csrf_token %}
+            <h2>Edit a new Blog</h2>
+            <label>Blog Title :</label>
+            <input type="text" name="bname" value="{{edit_blog.title}}"><br><br>
+            <label>Blog :</label>
+            <textarea name="body" >{{edit_blog.content}}</textarea><br>
+            <input type="submit" value="Update"><br><br>
+            <a href="/delete/{{edit_blog.id}}"> Delete Blog</a>
+        </form>
+    </center>
+</body>
+</html>
