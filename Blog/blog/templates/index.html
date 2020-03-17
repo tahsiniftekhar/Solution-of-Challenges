@@ -10,7 +10,7 @@
         <h2>Welcome to My First Blog SIte!!!</h2>
         {% if user.is_authenticated %}
         <h4>Hello, {{user.first_name}} !</h4>
-        <a href="/account/logout"> Log Out</a><br>
+        <a href="/account/logout"> Log Out</a><br><br>
         {% else %}
         <a href="/account/register">Register</a>    <a href="/account/login">Log In</a> <br><br>
         {% endif %}
