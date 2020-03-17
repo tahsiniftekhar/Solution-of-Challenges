@@ -8,10 +8,14 @@
 <body>
     <center>
         <h2>Welcome to My First Blog SIte!!!</h2>
-
-                <a href="/blogs">Click Here</a> for reading blogs.<br><br>
-
-        <h5>Write a new Blog!..<a href='/write'>Click Here</a></h5>
+        {% if user.is_authenticated %}
+        <h4>Hello, {{user.first_name}} !</h4>
+        <a href="/account/logout"> Log Out</a><br>
+        {% else %}
+        <a href="/account/register">Register</a>    <a href="/account/login">Log In</a> <br><br>
+        <a href="/blogs">Click Here</a> for reading blogs.<br><br>
+        {% endif %}
+        <h4>Write a new Blog!..<a href='/write'>Click Here</a></h4>
 
     </center>
 </body>
